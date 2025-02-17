@@ -1,0 +1,1911 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0%;
+            padding: 0%;
+        }
+        /* html,body{
+            overflow-y: hidden;
+        } */
+        .header{
+            position: sticky;
+            top: 0px;
+            z-index: 1;
+            display: flex;
+            justify-content: space-between;
+            padding: 1.5%;
+            background-color: white;
+        }
+        .header>.header-chi1d1,.header-chi1d2,.header-chi1d3{
+            font-size: 1.2rem;
+            padding-top: 1%;
+        
+        }
+    .header-chi1d2{
+        display: flex;
+        gap: 20%;
+        text-align: center;
+        width: 20vw;
+        padding-top: 1%;
+        
+    }
+    .header-chi1d3{
+        display: flex;
+        width: 16vw;
+        margin-left: 1%; 
+    }
+    .header-chi1d2-anchortag{
+        text-decoration: none;
+        color: black;
+    }
+    .fa-brands,.fa-solid{
+        margin-left: 5%;
+        font-size: 2rem;
+        color: orangered;
+    }
+    .hide{
+        display: none;
+        cursor: pointer;
+    }
+
+    /* sidebar */
+    .sidebar{
+        width: 5vw;
+        height: 40vh;
+        display: block;
+        margin-top: 7%; 
+        text-align: center;
+        margin-left: 93%;
+        position: fixed;
+        z-index: 1;
+        background-color: rgb(249, 247, 247);
+
+
+    }
+    
+    .sidebar-padding{
+        margin-top: 3%;
+        margin-bottom: 20%;
+    
+    }
+    .sidebar>i{
+        display: block;
+        
+    }
+    
+     #s1c,#s2c,#s3c,#s4c,#s5c,#s6c{
+         display: none;
+    } 
+    
+    #s1c{
+        position: absolute;
+        padding: 30% 60%;
+        background-color: rgb(248, 243, 243);;
+        left: -223%;
+        top: -3%;
+        cursor: pointer;
+        }
+        #s2c{
+            position: absolute;
+            padding: 30% 40%;
+            background-color: rgb(248, 243, 243);;
+            left: -218%;
+            top: 10%;
+            cursor: pointer;
+
+        }
+        #s3c{
+            position: absolute;
+            /* padding: 30% 50%; */
+            padding: 30% 70%;
+            background-color: rgb(248, 243, 243);;
+            left: -230%;
+            top: 25%;
+            cursor: pointer;
+
+        }
+        #s4c{
+            position: absolute;
+            padding: 20% 20%;
+            margin-top: 70%;
+            margin-left: -60%;
+            background-color: rgb(248, 243, 243);;
+            left: -100%;
+            top: 28%;
+            cursor: pointer;
+           }
+           #s5c{
+            position: absolute;
+            padding: 20% 20%;
+            margin-top: 130%;
+            margin-left: -60%;
+            background-color: rgb(248, 243, 243);;
+            left: -210%;
+            top: 28%;
+            cursor: pointer;
+           }
+           #s6c{
+            position: absolute;
+            padding: 20% 20%;
+            margin-top: 190%;
+            margin-left: -75%;
+            background-color: rgb(248, 243, 243); 
+            left: -210%;
+            top: 30%;
+            cursor: pointer;
+           }
+        #s1,#s2,#s3,#s4,#s5,#s6{
+            color: rgb(201, 196, 196);
+            font-size: 1.6rem;
+        }
+        #sidebar1,#sidebar2,#sidebar3,#sidebar4,#sidebar5,#sidebar6{
+            display: none; 
+        }
+        #sidebar1:checked + #s1c{
+            display: inline-block;
+        }
+        #sidebar2:checked + #s2c{
+            display: inline-block;
+        }
+        #sidebar3:checked + #s3c{
+            display: inline-block;
+        }
+        #sidebar4:checked + #s4c{
+            display: inline-block;
+        }
+        #sidebar5:checked + #s5c{
+            display: inline-block;
+        }
+        #sidebar6:checked + #s6c{
+            display: inline-block;
+        }
+        .sidebar-cont{
+            color: black;
+            text-decoration: none;
+        }
+
+
+    /* 2nd part */
+    .home{
+        display: flex;
+        height: 80vh;
+        margin: 4% 6%;
+
+    }
+    /* 2nd part chid1 */
+    .home-child1-2{
+        font-size: 4rem;
+        margin-top: 0%;
+    }
+    .home-child1-22{
+        font-size: 2rem;
+        color: gray;
+        margin-top: 6%;
+    }
+    .home-child1{
+        flex-basis: 50%;
+        background-color: #f8f5f8;
+        height: 110vh;
+    }
+    #button1{
+        padding: 3% 3%;
+        font-size: 1rem;
+        background-color: #100f0f;
+        color: white;
+        border-radius: 5cap; /* This adds the rounded corners */
+        margin-top: 20%;
+        margin-left: 6%;
+        margin-bottom: 13%;
+        cursor: pointer;
+        animation-name: move;
+        animation-duration: 4s;
+        animation-delay: 0s;
+    }
+    
+    @keyframes move{
+        from{
+            transform: translate(0px,-15px);
+        }
+        to{
+            transform: translate(0px,0px);
+        }
+    }
+    .home-child1-4{
+         margin-top: -10%;
+         margin-left: 0%;
+    }
+    .home-child1-4a{    
+        display: flex;
+        background-color: #f8f5f8;
+        color: #030303;
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-top: 25%;
+        text-decoration: none;
+        border: none;
+    }
+    #home-child1-4b{
+        color: rgb(55, 53, 53);
+        margin-left: 65%;
+        font-size: 100%;
+        margin-top: 175%;
+
+        
+    }
+    .home-child1-4a:hover{
+        color: orangered;
+    }
+    #home-child1-4b:hover{
+        color: orangered;
+    }
+    /* 2nd-part part-2  */
+    .home-child2{
+        z-index: -2;
+        flex-basis: 50%;
+    
+    }
+    .discount-code{
+        margin-top: 17%;
+        text-align: center;
+    }
+    .decor{
+        height: 100vh;
+        width: 90vw;
+        margin: auto;
+        margin-top: 3%;
+    }
+    .decor-child1{
+        display: flex;
+        justify-content: space-between;
+
+    }
+    .decor-child1-1a,.decor-child1-1b,.decor-child1-1c{
+        /* border: 2px solid; */
+        width: 32%;
+        height: 80vh;
+    }
+    .decor-child1-1a{
+        background-image: url(https://demo.htmlcodex.com/157/nature/img/blog-2.jpg);
+        background-repeat: no-repeat;
+        background-size: 100% 100% ;
+    }
+    #button2{
+        padding: 3% 3%;
+        font-size: 0.8rem;
+        background-color: #100f0f;
+        color: white;
+        border-radius: 5cap; /* This adds the rounded corners */
+        margin-top: 35%;
+        margin-left: 26%;
+        margin-bottom: 13%;
+        cursor: pointer;
+        animation-name: move;
+        animation-duration: 2s;
+
+    }
+
+    .decor-child1-1ab{
+        text-align: center;
+        color: orangered;
+        width: 10vw;
+        margin-left: 20%;
+    }
+    .decor-child1-1ac{
+        display: flex;
+        background-color: transparent;
+        border: none;
+        border-radius: 5cap;
+        width: 9vw;
+        margin-left: 23%;
+        margin-top: 10%;
+        animation-name: move;
+        animation-duration: 2s;
+         }
+    .decor-child1-1aca{
+        text-decoration: none;
+        padding-left: 18%;
+        padding-top: 5%;
+        padding-bottom: 5%;
+        color: white;
+        /* border: none;  */
+
+    }
+    #decor-child1-1acb{
+        color: white;
+        font-size: 100%;
+        margin-left: 100%;
+        margin-top: 80%;
+    }
+    .decor-child1-1b{
+        background-image: url(https://jevelin.shufflehound.com/wp-content/uploads/2016/03/Home_4_img_4.jpg);
+        background-repeat: no-repeat;
+        background-size: 100% 100% ;
+    }
+    .decor-child1-1ba{
+        margin-top: 60%;
+        width: 30%;
+        margin-left: 25%;
+        color: orangered;
+    }
+    .decor-child1-1c{
+        background-image: url(https://jevelin.shufflehound.com/wp-content/uploads/2016/03/Home_4_img_2.jpg);
+        background-repeat: no-repeat;
+        background-size: 100% 100% ;
+    }
+    .decor-child1-1ca{
+        margin-top: 40%;
+    }
+    .decor-child1-1caa{
+        text-decoration: none;
+        color: white;
+        background-color: orangered;
+        padding: 2% 5%;
+        border-radius: 1cap;
+        margin-left: 30%;
+        margin-bottom: 30%;
+
+    }
+    .decor-child1-1cb{
+        color: orangered;
+        width: 30%;
+        margin-left: 25%;
+        margin-top: 15%;
+    }
+    .decor-child2{
+        
+        width: 90vw;
+        margin: auto;
+    }
+    .decor-child2-a{
+        margin: 3% 4.0%;
+    }
+    /* 4th part special offer */
+    .spl-offer{
+        display: flex;
+        margin-top: 7%;
+        background-color: rgb(247, 244, 244);
+    }
+    .spl-offer-child1{
+        flex-basis: 50%;
+        text-align: center;
+        
+    }
+    .spl-offer-child2{
+        width: 50%;
+        height: 100vh;
+    }
+    .spl-offer-child2-content{
+        height: 50vh;
+        margin-top: 25%;
+      }
+      .spl-offer-child2-content>p{
+        font-size: 1.5rem;
+        margin-left: 15%;
+        margin-bottom: 3%;
+      }
+      .spl-offer-child2-content>h2{
+        font-size: 2.2rem;
+        color: rgb(32, 32, 32);
+        margin-left: 15%;
+        margin-right: 20%;
+      }
+      .spl-offer-child2-3{
+        background-color: black;
+        color: white;
+        margin-left: 15%;
+        margin-top: 4%;
+        padding: 2.5% 4%;
+        border-radius: 10%;
+        border: none;
+      }
+      .details{
+        height: 80vh;
+        display: flex;
+      }
+      .detail-child1,.detail-child2,.detail-child3{
+        margin-top: 3%;
+        width: 33vw;
+        text-align: center;
+        padding-top: 8%;
+      }
+      
+      .detail-child1>p,.detail-child2>p,.detail-child3>p{
+        margin: 10% 15%;
+        font-size: 1.2rem;
+        color: gray;
+      }
+      .detail-child2,.detail-child1{
+        box-shadow: 1px 1px 1px rgb(228, 225, 225);
+      }
+      #i3{
+        font-size: 3rem;
+        color: gray;
+
+      }
+      #i32{
+        font-size: 1.5rem;
+        margin-top: 13%;
+        color: rgb(34, 33, 33);
+      }
+      .ideas{ 
+        margin-top: 8%;
+        padding: 0% 3%;
+      }
+      
+      
+      .ideas>p{
+        text-align: center;
+        margin-bottom: 3%;
+        font-size: 3rem;
+      }
+      .ideas-child3{
+        display: flex;
+        margin-top: 3%;
+      }
+      .ideas-child3-a{
+        width: 50vw;
+        
+      }
+      .ideas-child3-a>h4{
+        font-size: 1.7rem;
+        font-weight: 20%;
+        margin-bottom: 2%;
+      }
+      .ideas-child3-a>span,p{
+        font-size: 1.2rem;
+        color: gray;
+      }
+      .ideas-child3-b{
+        flex-basis: 50%;
+        margin-left: 10%;
+      }
+      .ideas-child3-b>button{
+        margin-left: 79%;
+        margin-top: 6%; 
+        font-size: 1.1rem;
+        background-color: black;
+        color: white;
+        padding: 2% 2%;
+      }
+      .deals{
+        height: 150vh;
+        margin: 8% 2%;
+        /* opacity: 1;
+        background-color: black;  */
+      }
+      .deals>p{
+        font-size: 3rem;
+        width: 25vw;
+        margin: auto;
+        text-align: center;
+      }
+      .deals-cards{
+        margin-top: 5%;
+        height: 120vh;
+        gap: 1.5%;
+        display: grid;
+        grid-template-columns: 24% 24% 24% 24%;
+      }
+      .deals-card1{
+        font-size: 1.2rem;
+
+        
+        }
+         
+
+      .deals-card1>img{
+        width: 22vw;
+        height: 40vh;
+        display: block;
+        margin-bottom: 5%;
+        opacity: 0.3;
+        
+      }
+      .deals-card1:hover> img{
+        opacity: 1;
+      }
+      .deals-card1-content{
+        display: flex;
+      }
+      
+      .deals-card1-content1a{
+        display: block;
+        color: black;
+        text-decoration: none;
+
+      }
+      #deals-card1c{
+        color: black;
+        font-size: 1.1rem;
+        margin-left: 0%;
+        margin-top: 3%;
+      }
+      #deals-card1-content3{
+        color: black;
+        font-size: 1rem;
+        margin-left: 400%;
+        margin-top: -10%;
+        padding: 50% 50%;
+        background-color: rgb(242, 237, 237);
+        border-radius: 46% 46%;
+      }
+      #deals-card1-content3:hover{
+        background-color: orangered;
+        border-radius: 46% 46%;
+      }
+      .subscribe{
+        height: 50vh;
+        margin: 3%;
+      }
+      .subscribe-button{
+        background-color: rgb(10, 11, 11);
+        padding: 1% 2%;
+        color: white;
+        border: none;
+        border-radius: 10% 10%;
+        margin-left: 1%;
+        cursor: pointer;
+      }
+      .footer{
+        height: 80vh;
+        display: flex;
+        background-color: rgb(245, 240, 240);
+      }
+      .footer-child1,.footer-child2,.footer-child3,.footer-child4{
+        flex-basis: 30%;
+      }
+      .footer-child1>p,h4{
+        padding-left: 10%;
+        margin-top: 8%;
+        line-height: 1.8;
+      }
+      .footer-child1-paymentcards>i{
+        color: black;
+        margin-left: 10%;
+        margin-top: 10%;
+      }
+      .footer-child2-img1{
+        display: flex;
+        margin-top: 7%;
+        margin-left: 5%;
+        /* background-color: aqua; */
+        width: 20vw;
+      }
+      .footer-child2-img1>img{
+        width: 6vw;
+        height: 16vh;
+      }
+      .footer-child2-img1-content{
+        color: black;
+        text-decoration: none;
+        font-size: 1.1rem;
+        margin-top: -4%;
+      }
+      .footer-child3-content,.footer-child4-content{
+        line-height: 2.5;
+        margin-top: 7%;
+        margin-left: 10%;
+        
+      }
+      .footer-child4-content>a{
+        color: black;
+        text-decoration: none;
+
+      }
+      .subscribe>type{
+        display: block;
+      }
+      
+      .subscibe-p1{
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    .subscibe-p2{
+        text-align: center;
+        margin-top: 1%;
+        font-size: 1.2rem;
+        color: gray;
+    }
+      .subscibe-input{
+        padding: 1% 15%;
+        margin-top: 2%;
+        margin-left:20% ;
+        text-align: start;
+        background-color: rgb(237, 232, 232);
+        border: none;
+      }
+      .footer-child1-a{
+        font-size: 0.9rem;
+      }
+      .sandhya{
+        background-color: rgb(225, 224, 224);
+        height: 10vh;
+        text-align: center;
+      }
+      .sandy{
+        text-align: center;
+        font-size: 1.5rem;
+        padding-top: 1%;
+      }
+      .sandya{
+        margin-top: 2%;
+        box-shadow: 1px 1px 10px rgb(159, 41, 41)
+      }
+
+
+    @media screen and (max-width: 576px){
+        
+        .header{
+            width: 370vw;
+            height: 20vh;
+            padding: 10%;
+            /* font-size: 10rem; */
+        }
+        .header-chi1d1>img{
+            width: 100vw;
+            margin-top: -10%;
+            
+        }
+        #bar{
+            font-size: 5rem;
+        }
+        .header-chi1d2-hide{
+            background-color: rgb(218, 214, 214);
+            width: 50vw;
+            text-align: center;
+        }
+        .header-chi1d2-hide>a{
+            height:10vh;
+            font-size: 3rem;
+            margin-top: 10%;
+            color: black;
+            
+        }
+        .home{
+            /* background-color: aqua; */
+            flex-direction: column;
+            gap: 2%;
+            height: 170vh;
+            width: 370vw;
+            
+        }
+        .home-child1{
+            /* background-color: aqua; */
+            height: 350vh;
+            /* font-size: 2rem; */
+            text-align: center;
+        }
+        .home-child1, .home-child2{
+            flex-basis: 100%;
+        
+        }
+        #button1{
+            font-size: 2.5rem;
+        }
+        .home-child1-2{
+              font-size: 5rem;
+        }
+        .home-child1-22{
+           font-size: 2.8rem;
+        }
+        .header-chi1d2{
+            display: none;
+        }
+       
+        .hide{
+            display: block;
+            margin-left: 23%;
+        }
+        .header-chi1d3{
+            display: none;
+        }
+        .menu-toggle:checked ~ .header-chi1d2-hide{
+            display: flex;
+            flex-direction: column;
+        }
+        #check{
+            display: none; 
+            
+        }
+        .header-chi1d2-hide{
+            display: none;
+        }
+        .header-chi1d2-hide>a{
+            text-decoration: none;
+        }
+        .sidebar{
+        display: none;
+        }
+        .home-child1-4a{
+            font-size: 2rem;
+            margin: 12% 40%;
+            width: 80vw;
+         }
+         #home-child1-4b{
+            font-size: 3rem;
+            margin-left: -200%;
+            margin-top: 90%;
+         }
+         .discount-code{
+            margin-top: 400%;
+            width: 380vw;
+            height: 30vh;
+            font-size: 2rem;
+         }
+         .decor{
+            /* background-color: blue; */
+            width: 380vw;
+            height: 150vh;
+            
+            /* flex-direction: column; */
+         }
+         .decor-child1{
+            flex-direction: column;
+            width: 200vw;
+            margin-bottom:10%;
+            font-size: 10%;
+               }
+         .decor-child1-1a,.decor-child1-1b,.decor-child1-1c{
+                width: 350vw;
+                height: 200vh;
+                margin-left: 7%;
+                margin-bottom: 2%;
+               }
+         .card1-content{
+                font-size: 3rem;
+              }
+               #button2{
+                font-size: 2rem;
+                margin-top: 10%;
+               }
+               .decor-child1-1aca{
+                font-size: 3rem;
+                width: 150vw;
+                padding: 1% 20%;
+                margin-left: -100%;
+               }
+               .decor-child1-1ac{
+                width: 100vw;
+               }
+               .decor-child1-1ab{
+                margin-left: 25%;
+               }
+               .decor-child1-1ba{
+                background-color: transparent;
+                color: orangered;
+                font-size: 7rem;
+                margin-top: 30%;
+                width: 70vw;
+                height: 30vh;
+               }
+               .decor-child1-1cb{
+                background-color: transparent;
+                color: orangered;
+                font-size: 7rem;
+                margin-top: 5%;
+                width: 70vw;
+                height: 30vh;
+               }
+               .decor-child1-1caa{
+                font-size: 3rem;
+               }
+               .decor-child2{
+                width: 350vw;
+                margin-top: -10%;
+            }
+            .decor-child2-a{
+                padding: 4% 4%;
+            }
+               
+               .spl-offer{
+                margin-top: 850%;
+                width: 370vw;
+                height: 300vh;
+                flex-direction: column;
+               }
+               .spl-offer-child1>img{
+                width: 200vw;
+                height: 200vh;
+
+               }
+               .spl-offer-child2{
+                width: 380vw;
+                margin-top: 10%;
+                height: 120vh;
+               }
+               .spl-offer-child2-content{
+                margin-top: 0%;
+               }
+               .spl-offer-child2-content>p{
+                font-size: 5rem;
+               }
+               .spl-offer-child2-content>h2{
+                font-size: 3rem;
+               }
+               .spl-offer-child2-3{
+                font-size: 2.1rem;
+                margin-top: 2.5%;
+                margin-left: 15%;
+               }
+               .details{
+                width: 370vw;
+                height: 100vh;
+                flex-direction: column;
+               }
+               .detail-child1,.detail-child2,.detail-child3{
+                margin: auto;
+                width: 300vw;
+            
+               }
+               #i32{
+                font-size: 4rem;
+               }
+               .detail-child1>i{
+                font-size: 4rem;
+               }
+               .detail-child1>p,.detail-child2>p,.detail-child3>p{
+                font-size: 3rem;
+                width: 300vw;
+                margin-left: 0%;
+               }
+               .ideas{
+                margin-top: 350vh;
+                width: 380vw;
+
+               }
+               .ideas>p{
+                font-size: 8rem;
+
+               }
+               .ideas-img{
+               height: 200vh;
+               width: 375vw;
+               }
+               .ideas-child3{
+                height: 100vh;
+               }
+               .ideas-child3-a{
+                width: 450vw;
+                height: 100vh;
+                
+               }
+               .ideas-child3-a>h4{
+                font-size: 4rem;
+                margin-top: 0%;
+               }
+               .ideas-child3-a>span,.ideas-child3-a>p{
+                font-size: 3rem;
+               }
+               
+               .ideas-child3-b>button{
+                 font-size: 3rem;
+                 margin-left: 0%;
+                 margin-top: 100%;
+               }
+               .deals{
+                margin-top: 20%;
+                width: 380vw;
+               }
+               .deals>p{
+                font-size: 7rem;
+                width: 300vw;
+               }
+               .deals-cards{
+                grid-template-columns: auto;
+                gap: 3%;
+               }
+               .deals-card1>img{
+                width: 300vw;
+                height: 200vh;
+                margin: auto;
+                opacity: 1;
+               }
+               .deals-card1-content{
+                height: 30vh;
+                width: 300vw;
+                margin-left: 10%;
+                font-size: 4rem;
+               }
+               #deals-card1c{
+                  font-size: 3rem;
+               }
+               #deals-card1-content3{
+                font-size: 3rem;
+                margin-top: 25%;
+               }
+               .subscribe{
+                margin-top: 2800%;
+                width: 370vw;
+                height: 100vh;
+               }
+               .subscibe-p1{
+                font-size: 7rem;
+               }
+               .subscibe-p2{
+                font-size: 3.5rem;
+               }
+               .subscibe-input{
+                font-size: 3rem;
+                margin-left: 0%;
+                margin-top: 5%;
+               }
+               .subscribe-button{
+                padding: 2% 2%;
+                font-size: 2.5rem;
+               }
+               .footer{
+                flex-direction: column;
+                width: 0vw;
+                
+                
+               }
+               .footer-child1,.footer-child2,.footer-child3,.footer-child4{
+                width: 300vw;
+                margin-left: 30%;
+                font-size: 4rem;
+                text-align: center;
+               }
+               
+               .footer-child1-paymentcards>i{
+                font-size: 6rem;
+               }
+               .footer-child1-a{
+                font-size: 3rem;
+               }
+               .footer-child2>h4{
+                font-size: 4rem;
+               }
+               .footer-child2-img1{
+                margin: auto;
+                margin-top: 2%;
+                width: 200vw;
+                height: 100vh;
+               }
+               .footer-child2-img1>img{
+                width: 100vw;
+                height: 80vh;
+               }
+               .footer-child2-img1-content{
+                font-size: 3rem;
+               }
+               .footer-child3-content>p{
+                font-size: 4rem;
+            
+               }
+               .footer-child4-content-4{
+                font-size: 4rem;
+               }
+               .sandhya{
+                margin-top: 1020vh;
+                width: 370vw;
+                height: 30vh;
+                font-family: 'Courier New', Courier, monospace;
+               }
+               .sandy{
+                font-size: 5rem;
+               }
+
+
+        
+    }
+
+    @media screen and (min-width: 576px) and (max-width: 768px){
+        .header{
+            width: 220vw;
+        
+        }
+        .header-chi1d2-anchortag{
+            font-size: 2.5rem;
+        }
+        .header-chi1d3{
+            margin-right: 5%;
+            gap: 2%;
+        }
+        .sidebar{
+            height: 90vh;
+            width: 15vw;
+        }
+        #s1,#s2,#s3,#s4,#s5,#s6{
+            font-size: 3.5rem;
+        }
+        
+        .home{  
+            width: 200vw;
+        }
+        .discount-code{
+            margin-top: 50%;
+            width: 205%;
+            font-size: 1.5rem;
+        }
+        .decor{
+            
+            width: 200vw;
+            height: 150vh;
+        }
+        .decor-child1-1a,.decor-child1-1b,.decor-child1-1c{
+            
+            height: 140vh;
+            font-size: 2rem;
+        }
+        hr{
+            width: 200vw;
+        }
+        #button2{
+            font-size: 1.5rem;
+        }
+        .decor-child1-1ac{
+            font-size: 1.5rem;
+            width: 30vw;
+            
+        }
+        #decor-child1-1acb{
+            position: absolute;
+            margin-top: 1.5%;
+            margin-left: 2%;
+        }
+        .decor-child1-1caa{
+            font-size: 1.5rem;
+        }
+        .decor-child2{
+            width: 200vw;
+            font-size: 10rem;
+        }
+        .spl-offer{
+            width: 200vw;
+            height: 300vh;
+            margin-top: 30%;
+            padding-top: 20%;
+            background-color: transparent;
+            /* background-color: aqua; */
+        }
+        
+        .spl-offer-child1>img{
+            width: 50vw;
+        }
+        .spl-offer-child2{
+            font-size: 2rem;
+            text-align: center;
+            line-height: 1.5;
+        }
+        .spl-offer-child2-content>p{
+            
+            font-size: 2rem;
+            margin-left: 15%;
+            margin-top: -20%;
+            width: 60vw;
+        }
+        .spl-offer-child2-content>h2{
+            font-size: 2.5rem;
+            margin-left: 2%;
+            width: 90vw;
+        }
+        .spl-offer-child2-3{
+            font-size: 1.5rem;
+            margin-left: 0%;
+        }
+        
+        .details{
+            width: 200vw;
+            height: 140vh;
+            margin-top: 20%;
+            
+        }
+        .detail-child1,.detail-child2,.detail-child3{
+            
+            width: 67vw;
+        
+        }
+        #i32{
+            font-size: 2rem;
+        }
+        .detail-child1>p,.detail-child2>p,.detail-child3>p{
+            font-size: 1.7rem;
+        }
+        .ideas{
+            width: 200vw;
+            margin-top: 20%;
+            
+
+        }
+         .ideas-img{
+            width: 200vw;
+         }
+        .ideas>p{
+            margin-left: 10%;
+        }
+       
+        .ideas-child3-a{
+            width: 150vw;
+            height: 60vh;
+        }
+        .ideas-child3-a>h4{
+            font-size: 2.8rem;
+        }
+        .ideas-child3-a>span{
+            font-size: 1.7rem;
+        }
+        .ideas-child3-a>p{
+            font-size: 1.8rem;
+        }
+        .ideas-child3-b>button{
+            font-size: 2rem;
+            margin-left: 10%;
+            margin-top: 20%;
+            width: 50vw;
+        }
+        .deals{
+           
+            width: 200vw;
+            height: 250vh;
+            margin-top: 20%;
+        }
+        .deals>p{
+            text-align: center;
+            width:80vw;
+            font-size: 3.5rem;
+        }
+        
+        .deals-card1>img{
+            
+            width: 43vw;
+            height: 80vh;
+            opacity: 1;
+        }
+        .deals-card1-content{
+            
+            height: 20vh;
+            margin-bottom: 10%;
+        }
+        .details-card1-content1{
+          
+            width: 35vw;
+            font-size: 1.9rem;
+        }
+        #deals-card1-content3{
+           
+            width: 10vw;
+            z-index: 3;
+            font-size: 2rem;
+            margin-left: -10%;
+            padding-left: 30%;
+            background-color: transparent;
+        }
+        .subscribe{
+            
+            width: 200vw;
+            height: 60vh;
+            margin-top: 20%;
+        }
+       .subscibe-p1{
+    
+        font-size: 3rem;
+       }
+       .subscibe-p2{
+    
+        font-size: 2rem;
+        margin-left: 2%;
+       }
+       .subscibe-input{
+        font-size: 1.5rem;
+       }
+       .subscribe-button{
+        font-size: 1.5rem;
+       }
+       .footer{
+        width: 220vw;
+        background-color:transparent;
+        margin-left: 3%;
+       }
+       .footer-child1>h4,.footer-child2>h4,.footer-child3>h4,.footer-child4>h4{
+        font-size: 2rem;
+       }
+       .footer-child1>p{
+        font-size: 1.8rem;
+       }
+       .footer-child1-lock>span{
+        font-size: 2rem;
+       }
+       .footer-child1>span{
+        font-size: 1.8rem;
+       }
+       .footer-child2-img1-content>h4{
+        font-size: 1.6rem;
+        color: #333030;
+       }
+       .footer-child3-content>p{
+        width: 20vw;
+        line-height: 1.3;
+        font-size: 2rem;
+        margin-left: 10%;
+
+       }
+       .footer-child4-content-4{
+        font-size: 10rem;
+        line-height: 1.9;
+       }
+       
+
+        .sandhya{
+    
+            width: 200vw;
+            height: 15vh;
+            text-align: center;
+            background-color: rgb(245, 240, 240);
+            box-shadow: 1px 1px 3px gray;
+            margin-top: 10%;
+        }
+        #sandy{
+            padding-top: 1%;
+            font-size: 3rem;
+        }
+        }
+        @media screen and (min-width: 768px) and (max-width: 1024px){
+            .header{    
+                width: 200vw;
+            
+            }
+            .header-chi1d1>img{
+                width: 20vw;
+                height: 10vh;
+            }
+            .header-chi1d2{
+                font-size: 3rem;
+                margin-left: -20%;
+            }
+            .header-chi1d3{
+                margin-right: 10%;
+                gap: 5%;
+            }
+            .header-chi1d3>i{
+                font-size: 4rem;
+            }
+            .home{
+                width: 190vw;
+                height: 150vh;
+            }
+            .home-child1{   
+                height: 147vh;
+            }
+            #button1{
+                font-size: 2rem;
+            }
+            .home-child1-2{
+                font-size: 7rem;
+            }
+            .home-child1-22{
+                font-size: 3rem;
+            }
+            .home-child1-2{
+                margin-left: 0%;
+            }
+            .home-child1-4a{
+                font-size: 2rem;
+                margin-top: 20%;
+                width: 15vw;
+            }
+            .sidebar{
+                display: none;
+            }
+            .discount-code{
+                width: 200vw;
+                font-size: 2.8rem;
+            }
+            .decor{
+                width: 200vw;
+                height: 170vh;
+            }
+            .decor-child1-1a,.decor-child1-1b,.decor-child1-1c{
+                height: 128vh;
+            }
+            .decor-child1-1ab{
+                width: 30vw;
+            }
+           .card1-content,.card2-content,.card3-content{
+                font-size: 2.5rem;
+            }
+            #button2{
+                font-size: 2rem;
+            }
+            .decor-child1-1ac{
+                font-size: 2.1rem;
+                width: 40vw;
+                margin-left: 4%;
+            }
+            .decor-child1-1caa{
+                font-size: 2.5rem;
+            }
+            .decor-child2{
+                width: 200vw;
+            }
+            .decor-child2-a{
+                width: 17vw;
+            }
+            .spl-offer{
+                width: 200vw;
+                height: 170vh;
+            }
+            .spl-offer-child1>img{
+                margin-top: 4%;
+                width: 70vw;
+                height: 150vh;
+            }
+            .spl-offer-child2-content{
+                height: 100vh;
+            
+            }
+            .spl-offer-child2-content>p{
+                font-size: 6rem;
+            }
+            .spl-offer-child2-content>h2{
+                font-size: 3rem;
+                margin-top: 7%;
+
+            }
+            .spl-offer-child2-3{
+                font-size: 2.5rem;
+                margin-top: 10%;
+            }
+            .details{
+                width: 200vw;
+                height: 130vh;
+            }
+            .detail-child1,.detail-child2,.detail-child3{
+                width: 67vw;
+            }
+            #i32{
+                font-size: 3.5rem;
+            }
+            .detail-child1>p,.detail-child2>p,.detail-child3>p{
+                font-size: 2.5rem;
+            }
+            .ideas{
+                width: 200vw;
+            }
+            .ideas>p{
+                font-size: 6rem;
+            }
+            .ideas-img{
+                width: 193vw;
+            }
+            
+            .ideas-child3-a{
+                width: 200vw;
+            }
+            .ideas-child3-a>h4{
+                font-size: 4rem;
+                margin-top: 1%;
+                margin-left: -10%;
+            }
+            .ideas-child3-a>span,p{
+                font-size: 3rem;
+                margin-left: -10%;
+            }
+            .ideas-child3-b>button{
+                font-size: 3rem;
+                margin-top: 20%;
+                margin-left: 15%;
+            }
+            .deals{
+                width: 200vw;
+                height: 220vh;
+            }
+            .deals>p{
+                font-size: 6rem;
+                width: 200vw;
+            }
+            .deals-card1>img{
+                width: 45vw;
+                height: 70vh;
+                opacity: 1;
+            }
+            .deals-card1-content,#deals-card1c{
+                font-size: 2.5rem;
+            }
+            #deals-card1-content3{
+                font-size: 2.5rem;
+                margin-left: 25%;
+            }
+            .subscribe{
+                width: 200vw;
+                height: 80vh;
+            }
+            .subscibe-p1{
+                font-size: 6rem;
+            }
+            .subscibe-p2{
+                font-size: 3.5rem;
+            }
+            .subscibe-input,.subscribe-button{
+                font-size: 2.3rem;
+            }
+            .footer{
+                width: 200vw;
+                height: 130vh;
+            }
+            .footer-child1-a{
+                font-size: 2.5rem;
+                margin-left: 0%;
+            }
+            .footer-child1,.footer-child2,.footer-child3,.footer-child4{
+                font-size: 2.5rem;
+            }
+            .footer-child1-paymentcards>i{
+                font-size: 4rem;
+            }
+            
+            .footer-child2-img1{
+                width: 45vw;
+                height: 30vh;
+            }
+            .footer-child2-img1>img{
+                 width: 25vw;
+                 height: 30vh;
+            }
+            .footer-child2-img1-content{
+                font-size: 2rem;    
+            }
+            .footer-child3-content>p,.footer-child4-content-4{
+                font-size: 2.5rem;
+                margin-left: 10%;
+            }
+            .sandhya{
+                width: 200vw;
+                height: 22vh;
+                margin-top: 5%;
+            }
+            .sandy{
+                font-size: 4rem;
+            }
+        
+            
+            
+        
+        }
+    
+
+    </style>
+    
+    
+
+</head>
+<body>
+    <div class="header">
+        <div class="header-chi1d1">
+            <img src="https://jevelin.shufflehound.com/minimal-furniture-shop/wp-content/uploads/sites/42/2018/03/Jevelin_logo_dark.png" alt="">
+        </div>
+        <div class="header-chi1d2">
+            <div><a class="header-chi1d2-anchortag" href="#i1">Home</a></div>
+            <div><a class="header-chi1d2-anchortag" href="shop.html">Shop</a></div>
+            <div><a class="header-chi1d2-anchortag" href="shop.html">Decor</a></div>
+            <div><a class="header-chi1d2-anchortag" href="shop.html">Plant</a></div>
+            <div><a class="header-chi1d2-anchortag" href="shop.html">Light</a></div>
+        </div>
+       
+        <div class="header-chi1d3">
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+        
+        
+
+        <div class="hide">
+            <label for="check" ><i id="bar" class="fa-solid fa-bars"></i></i>
+            <input type="checkbox" id="check" class="menu-toggle">
+
+            <div class="header-chi1d2-hide">
+                <a href="#i1" ><div>Home</div></a>
+                <a href="#i1"><div>Shop</div></a>
+                <a href="#i1"><div>Decor</div></a>
+                <a href="#i1"><div>Plant</div></a>
+                <a href="#i1"><div>Light</div></a>
+            </div>
+
+        </div>
+        
+         
+</div>
+
+         <!-- side bar -->
+        <div class="sidebar">
+               <div class="sidebar-padding">
+                    <label for="sidebar1"><i  id="s1" class="fa-solid fa-layer-group"></i></label>
+                    <input type="checkbox" name="" id="sidebar1">
+                    <span id="s1c"><a class="sidebar-cont" href="#i1">Showcase</a></span>
+                </div>
+                   <div class="sidebar-padding">
+                    <label for="sidebar2"><i  id="s2" class="fa-solid fa-glasses"></i></label>
+                    <input type="checkbox" name="" id="sidebar2">
+                    <span id="s2c"><a class="sidebar-cont" href="#i1">Demo viewer</a></span>
+                </div>
+                <div class="sidebar-padding">
+                    <label for="sidebar3"><i  id="s3" class="fa-solid fa-bag-shopping"></i></label>
+                    <input type="checkbox" name="" id="sidebar3">
+                    <span id="s3c"><a class="sidebar-cont" href="#i1">Purchase</a></span>
+                </div>
+                <div class="sidebar-padding">
+                    <label for="sidebar4"><i  id="s4" class="fa-solid fa-circle-question"></i></label>
+                    <input type="checkbox" name="" id="sidebar4">
+                    <span id="s4c"><a class="sidebar-cont" href="#i1">Get Support</a></span>
+
+                </div>
+                <div class="sidebar-padding">
+                    <label for="sidebar5"><i  id="s5" class="fa-solid fa-life-ring"></i></label>
+                    <input type="checkbox" name="" id="sidebar5">
+                    <span id="s5c"><a class="sidebar-cont" href="#i1">Questions and answers</a></span>
+                </div>
+
+                <div class="sidebar-padding">
+                    <label for="sidebar6"><i  id="s6" class="fa-solid fa-envelope"></i></label>
+                    <input type="checkbox" name="" id="sidebar6">
+                    <span id="s6c"><a class="sidebar-cont" href="#i1">Ask a pre sales question</a></span>
+                </div>
+           </div>
+                 
+                
+   
+   <!-- home part -->
+         <div class="home" id="i1">
+            <div class="home-child1">
+               <div class="button1-animation">
+                    <button id="button1">
+                        <a class="header-chi1d2-anchortag" href="/shop.html" style="color: white;">New Collection</a>
+                    </button>
+              </div>
+              <p class="home-child1-2">Fill your home with uniqueness</p>
+              <h2 class="home-child1-22">Huge variety with modern glamour!</h2>
+              <div class="home-child1-4" id="i1">
+                      <button class="home-child1-4a">
+                           <a class="home-child1-4a" href="#i1">Explore</a>
+                           <a href="#i1"> <i id="home-child1-4b" class="fa-solid fa-angle-down"></i></a>
+                      </button>
+              </div>
+            </div>
+            <div class="home-child2" data-aos="fade-down-left" data-aos-duration="2000">
+                <img src="https://jevelin.shufflehound.com/minimal-furniture-shop/wp-content/uploads/sites/42/2018/03/inside-weather-E5lK_COkD2E-unsplash-copy.jpg" alt="" width="100%">
+            </div>
+
+    </div>
+    <!-- discount code -->
+    <div class="discount-code">
+        <h2 style="color: rgb(105, 104, 104);">! Use discount code: FIRSTIME to get <span style="color: orangered;">10% off</span> your first order !</h2>
+    </div>
+    <br><br><hr> 
+<!-- decor -->
+     <div class="decor"> 
+        <!-- decor child1 -->
+        <div class="decor-child1">
+<!-- first card -->
+             <div class="decor-child1-1a">
+                <div class="card1-content">
+                    <button id="button2"><a href="/shop.html" style="color: white; text-decoration: none;">New collection</a></button>
+                    <h1 class="decor-child1-1ab">Lights &Decor</h1>
+                    <p>
+                          <button class="decor-child1-1ac">
+                                <a class="decor-child1-1aca" href="#i1">Show more</a>
+                                <a href="#i1"> <i id="decor-child1-1acb" class="fa-solid fa-angle-down"></i></a>
+                          </button>
+                    </p>
+                </div>
+            </div>
+<!-- second card -->
+            <div class="decor-child1-1b">
+                <div class="card2-content">
+                <h1 class="decor-child1-1ba">Kitchen Cutlery</h1>
+                <p>
+                    <button class="decor-child1-1ac">
+                        <a class="decor-child1-1aca" href="#i1">
+                        Show more</a>
+                        <a href="#i1"> <i id="decor-child1-1acb" class="fa-solid fa-angle-down"></i></a>
+                     </button>
+                </p>
+            </div>
+            </div>
+<!-- third card -->
+             <div class="decor-child1-1c">
+                <div class="card3-content">
+                <p class="decor-child1-1ca">
+                             <a class="decor-child1-1caa" href="#i1">Sale</a>
+                </p>
+                <h1 class="decor-child1-1cb">Living Room</h1>
+                <p>
+                    <button class="decor-child1-1ac">
+                        <a class="decor-child1-1aca" href="#i1">
+                        Show more</a>
+                        <a href="#i1"> <i id="decor-child1-1acb" class="fa-solid fa-angle-down"></i></a>
+                     </button>
+                </p>
+            </div>
+                
+            </div>
+        </div>
+        <!-- decor child2 -->
+        <div class="decor-child2">
+            <img class="decor-child2-a" src="https://jevelin.shufflehound.com/minimal-furniture-shop/wp-content/uploads/sites/42/2018/03/Partners6-copy.png" alt="">
+            <img class="decor-child2-a" src="https://jevelin.shufflehound.com/minimal-furniture-shop/wp-content/uploads/sites/42/2018/03/Partners1-copy.png" alt="">
+            <img class="decor-child2-a" src="https://jevelin.shufflehound.com/minimal-furniture-shop/wp-content/uploads/sites/42/2018/03/Partners4-copy.png" alt="">
+            <img class="decor-child2-a" src="https://jevelin.shufflehound.com/minimal-furniture-shop/wp-content/uploads/sites/42/2018/03/Partners2-copy.png" alt="">
+            <img class="decor-child2-a" src="https://jevelin.shufflehound.com/minimal-furniture-shop/wp-content/uploads/sites/42/2018/03/Partners3-copy.png" alt="">
+            <img class="decor-child2-a" src="https://jevelin.shufflehound.com/minimal-furniture-shop/wp-content/uploads/sites/42/2018/03/Partners5-copy.png" alt="">
+
+        </div>
+
+    </div>
+    <!-- -section4-special offer -->
+    <div class="spl-offer">
+        <div class="spl-offer-child1">
+            <img src="https://jevelin.shufflehound.com/minimal-furniture-shop/wp-content/uploads/sites/42/2018/03/Ellipse-622-copy-3.png" alt="">
+        </div>
+        <div class="spl-offer-child2">
+                    <div class="spl-offer-child2-content" >
+                         <p >Our special offer</p>
+                         <h2>Featured products with amazing color variety for your home</h2>
+                         <button class="spl-offer-child2-3">
+                             <a href="#i1" style="color: white; text-decoration: none;">Purchase</a>
+                         </button>
+            
+                    </div>
+
+        </div> 
+    </div>
+
+    <!-- Section5- details -->
+     <div class="details">
+        
+        <div class="detail-child1">
+              <i id="i3" class="fa-regular fa-clock"></i>
+              <h4  id="i32"  >24 h Shipping</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo felis, consectetur id elit id.</p>
+        </div>
+        <div class="detail-child2">
+               <i id="i3" class="fa-solid fa-truck"></i>
+               <h4 id="i32">Free Returns</h4>
+               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo felis, consectetur id elit id.</p>
+        </div>
+        <div class="detail-child3">
+                 <i id="i3" class="fa-solid fa-hand-holding-dollar"></i>
+                 <h4 id="i32" >100% Money Back Guarantee</h4>
+                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo felis, consectetur id elit id.</p>
+        </div>
+    </div>
+
+ <!-- section 6-Ideas -->
+    <div class="ideas"  >
+        <p>Ideas for inspiration</p>
+
+        <div  id=chair class="animate__animated animate__rotateInUpLeft animate_delay-3s">
+        <img  class="ideas-img" src="https://jevelin.shufflehound.com/minimal-furniture-shop/wp-content/uploads/sites/42/2018/03/Hue_Saturation-2.jpg" alt="">
+        </div>
+
+        <div class="ideas-child3">
+               <div class="ideas-child3-a">
+                   <h4>Find the closest store to your location</h4>
+                   <span style="padding-left: 10%;">Quisque ut aliquam nunc, at finibus ante. Sed dignissim,</span>
+                   <p style="padding-left: 10%;">nulla a fermentum egestas, odio</p>
+               </div>
+               <div class="ideas-child3-b">
+                    <button>Find Now</button>
+               </div>
+        </div>
+    </div>
+    <!-- section 7--deals -->
+<div class="deals">
+        <p>Great deals for great prices</p>
+        <div class="deals-cards">
+            <div class="deals-card1">
+                <img src="https://jevelin.shufflehound.com/minimal-furniture-shop/wp-content/uploads/sites/42/2018/03/5559331632_2_1_1_0011_jeremy-lwanga-uUwEAW5jFLE-unsplash-660x660.jpg" alt="">
+    
+               <div class="deals-card1-content">
+                          <div class="details-card1-content1">
+                                 <a class="deals-card1-content1a" href="#">Table succulent plant</a>
+                                 <a href="#i1"><i id="deals-card1c" class="fa-solid fa-sterling-sign">5.00</i></a>
+                          </div>
+                          <div>
+                                 <a href="#i1"><i id="deals-card1-content3" class="fa-solid fa-cart-arrow-down"></i></a>
+                          </div>
+              </div>
+          </div> 
+ <!-- section 7--deals--card2 -->
+            <div class="deals-card1">
+                <img src="https://jevelin.shufflehound.com/minimal-furniture-shop/wp-content/uploads/sites/42/2018/03/5559331632_2_1_1_0010_sincerely-media-VDPauwJ_sHo-unsplash-660x660.jpg" alt="">
+               <div class="deals-card1-content">
+                          <div class="details-card1-content1">
+                                 <a class="deals-card1-content1a" href="#">Metallic sidetable lamp</a>
+                                 <a href="#i1"><i id="deals-card1c" class="fa-solid fa-sterling-sign">5.00</i></a>
+                          </div>
+                          <div>
+                                 <a href="#i1"><i id="deals-card1-content3" class="fa-solid fa-cart-arrow-down"></i></a>
+                          </div>
+                </div>
+            </div>
+            <div class="deals-card1">
+                <img src="https://jevelin.shufflehound.com/minimal-furniture-shop/wp-content/uploads/sites/42/2018/03/5559331632_2_1_1_0009_minh-pham-Wn1gmozpNZc-unsplash-660x660.jpg" alt="">
+               <div class="deals-card1-content">
+                          <div class="details-card1-content1">
+                                 <a class="deals-card1-content1a" href="">Wooden picture frame</a>
+                                 <a href="#i1"><i id="deals-card1c" class="fa-solid fa-sterling-sign">5.00</i></a>
+                          </div>
+                          <div>
+                                 <a href="#i1"><i id="deals-card1-content3" class="fa-solid fa-cart-arrow-down"></i></a>
+                          </div>
+              </div>
+            </div>
+            <div class="deals-card1">
+                <img src="https://jevelin.shufflehound.com/minimal-furniture-shop/wp-content/uploads/sites/42/2018/03/5559331632_2_1_1_0008_minh-pham-7pCFUybP_P8-unsplash-660x660.jpg" alt="">
+               <div class="deals-card1-content">
+                          <div class="details-card1-content1">
+                                 <a class="deals-card1-content1a" href="#">Bedroom mirror</a>
+                                 <a href="#i1"><i id="deals-card1c" class="fa-solid fa-sterling-sign">5.00</i></a>
+                          </div>
+                          <div>
+                                 <a href="#i1"><i id="deals-card1-content3" class="fa-solid fa-cart-arrow-down"></i></a>
+                          </div>
+              </div>
+            </div>
+            <div class="deals-card1">
+                <img src="https://jevelin.shufflehound.com/minimal-furniture-shop/wp-content/uploads/sites/42/2018/03/5559331632_2_1_1_0007_christopher-burns-56tCOHi5OzA-unsplash-660x660.jpg" alt="">
+               <div class="deals-card1-content">
+                          <div class="details-card1-content1">
+                                 <a class="deals-card1-content1a" href="#i1">Minimalistic chair</a>
+                                 <a href="#i1"><i id="deals-card1c" class="fa-solid fa-sterling-sign">5.00</i></a>
+                          </div>
+                          <div>
+                                 <a href="#i1"><i id="deals-card1-content3" class="fa-solid fa-cart-arrow-down"></i></a>
+                          </div>
+              </div>
+            </div>
+            <div class="deals-card1">
+                <img src="https://jevelin.shufflehound.com/minimal-furniture-shop/wp-content/uploads/sites/42/2018/03/5559331632_2_1_1_0006_kari-shea-3_cyj5YkhTs-unsplash-660x660.jpg" alt="">
+               <div class="deals-card1-content">
+                          <div class="details-card1-content1">
+                                 <a class="deals-card1-content1a" href="#">Cactus succulent plant</a>
+                                 <a href="#i1"><i id="deals-card1c" class="fa-solid fa-sterling-sign">5.00</i></a>
+                          </div>
+                          <div>
+                                 <a href="#i1"><i id="deals-card1-content3" class="fa-solid fa-cart-arrow-down"></i></a>
+                          </div>
+              </div>
+            </div>
+            <div class="deals-card1">
+                <img src="https://jevelin.shufflehound.com/minimal-furniture-shop/wp-content/uploads/sites/42/2018/03/5559331632_2_1_1_0005_stephanie-harvey-80xePqQVKzs-unsplash-660x660.jpg" alt="">
+               <div class="deals-card1-content">
+                          <div class="details-card1-content1">
+                                 <a class="deals-card1-content1a" href="#">Decorative pillow</a>
+                                 <a href="#i1"><i id="deals-card1c" class="fa-solid fa-sterling-sign">5.00</i></a>
+                          </div>
+                          <div>
+                                 <a href="#i1"><i id="deals-card1-content3" class="fa-solid fa-cart-arrow-down"></i></a>
+                          </div>
+              </div>
+            </div>
+            <div class="deals-card1">
+                <img src="https://jevelin.shufflehound.com/minimal-furniture-shop/wp-content/uploads/sites/42/2018/03/5559331632_2_1_1_0004_bedroom-bulb-interior-decoration-lamp-545048-660x660.jpg" alt="">
+               <div class="deals-card1-content">
+                          <div class="details-card1-content1">
+                                 <a class="deals-card1-content1a" href="#">Metallic table lamp</a>
+                                 <a href="#i1"><i id="deals-card1c" class="fa-solid fa-sterling-sign">5.00</i></a>
+                          </div>
+                          <div>
+                                 <a href="#i1"><i id="deals-card1-content3" class="fa-solid fa-cart-arrow-down"></i></a>
+                          </div>
+              </div>
+            </div>
+        </div>
+    </div>
+    <br>
+<!-- section 8 -->
+    <div class="subscribe">
+              <p  class="subscibe-p1">Join the newsletter</p>
+              <p class="subscibe-p2" >Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris</p>
+              <div>
+                   <input class="subscibe-input" type="text" placeholder="Please enter your email here"  >
+                   <button class="subscribe-button">subscibe</button>
+              </div>
+    </div> 
+
+<!-- section9-footer -->
+     <div class="footer"> 
+        <!-- footer part1 -->
+         <div class="footer-child1">
+              <h4>PAYMENT METHOD</h4>
+              <p  class="footer-child1-a">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore.
+            </p>
+            <div class="footer-child1-paymentcards">
+                <i class="fa-brands fa-cc-visa"></i>
+                <i class="fa-brands fa-cc-mastercard"></i>
+                <i class="fa-brands fa-cc-paypal"></i>
+                <i class="fa-brands fa-cc-jcb"></i>
+            </div>
+            <div class="footer-child1-lock">
+                <i class="fa-solid fa-lock" style="color: black; font-size: 2rem; margin-top: 10%; margin-left: 10%;"></i>
+                <span>Secure online payment</span>
+            </div>
+        </div>
+         <!-- footer part2 -->
+     <div class="footer-child2">
+            <h4>TOP RATED</h4>
+
+            <div class="footer-child2-img1">
+                <img src="https://jevelin.shufflehound.com/minimal-furniture-shop/wp-content/uploads/sites/42/2018/03/5559331632_2_1_1_0011_jeremy-lwanga-uUwEAW5jFLE-unsplash-660x660.jpg" alt="">
+              <a href="/shop.html" class="footer-child2-img1-content">
+                      <h4>Table succulent plant
+                         <br> £5.00</h4>
+              </a>
+            </div>
+
+            <div class="footer-child2-img1">
+                <img src="https://jevelin.shufflehound.com/minimal-furniture-shop/wp-content/uploads/sites/42/2018/03/5559331632_2_1_1_0010_sincerely-media-VDPauwJ_sHo-unsplash-660x660.jpg" alt="">
+              <a href="/shop.html" class="footer-child2-img1-content">
+                      <h4>Metallic sidetable lamp
+                         <br> £5.00</h4>
+              </a>
+            </div>
+
+            <div class="footer-child2-img1">
+                <img src="https://jevelin.shufflehound.com/minimal-furniture-shop/wp-content/uploads/sites/42/2018/03/5559331632_2_1_1_0009_minh-pham-Wn1gmozpNZc-unsplash-660x660.jpg" alt="">
+              <a href="/shop.html" class="footer-child2-img1-content">
+                      <h4>Wooden picture frame
+                         <br> £5.00</h4>
+              </a>
+            </div>
+            
+        </div> 
+        <!-- footer-part3 -->
+         <div class="footer-child3">
+           <h4>SHOPPING GUIDE</h4>  
+           <div class="footer-child3-content">
+                   <p>FAQ</p>
+                   <p>Shipment</p>
+                   <p>Returns</p>
+                   <p>Policies</p>
+                   <p>Gift cards</p>
+                   <p>Clothing care</p>
+                   <p>Purchase conditions</p>
+           </div>         
+        </div> 
+
+         <!-- footer-part4  -->
+         <div class="footer-child4">
+            <h4>COMPANY</h4>  
+           <div class="footer-child4-content">
+                   <a href="#i1"><p class="footer-child4-content-4">about us</p></a>
+                   <a href="#i1"><p class="footer-child4-content-4">press</p></a>
+                   <a href="#i1"><p class="footer-child4-content-4">Our team</p></a>
+                   <a href="#i1"><p class="footer-child4-content-4">Offices</p></a>
+                   <a href="#i1"><p class="footer-child4-content-4">Affiliates</p></a>
+                   <a href="#i1"><p class="footer-child4-content-4">Giveaway</p></a>
+                   <a href="#i1"><p class="footer-child4-content-4">Contact</p></a>
+           </div>
+         </div>
+ </div>
+         
+ 
+ 
+ 
+           <div  class="sandhya">
+                <p id="sandy" class="sandy">Developed by Sandhya D</p>
+            </div>
+         
+    
+
+            <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+            <script>
+                AOS.init();
+              </script>
+
+    
+    
+</body>
+</html>
